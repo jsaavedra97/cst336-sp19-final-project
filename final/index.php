@@ -80,7 +80,7 @@
                         success: function(data, status) {
                             console.log(data);
                             if (data.isAuthenticated) {
-                                window.location = "matches.php";
+                                window.location = "dashboard.php";
                                 console.log("in success");
                             } else {
                                 $("#message").html("Bad email or password");

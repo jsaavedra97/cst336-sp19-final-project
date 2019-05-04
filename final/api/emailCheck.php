@@ -2,15 +2,11 @@
     
     include 'dbConnection.php';
     $conn = getDatabaseConnection("final");
-    $productId = $_GET['productId'];
     
-    $sql = "SELECT * FROM om_product NATURAL JOIN om_purchase WHERE productId = :pId";
-    
-    $np = array();
-    $np[':pId'] = $productId;
+    $sql = "SELECT email_address FROM user WHERE email_address = :email_address";
     
     $stmt = $conn->prepare($sql);
-    $stmt->execute($np); // We NEED to include $namedParameters here
+    $stmt->execute(); // We NEED to include $namedParameters here
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	echo json_encode($records);
     
