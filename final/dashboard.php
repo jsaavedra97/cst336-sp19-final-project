@@ -74,7 +74,7 @@
                 <a class="nav-link" href="dashboard.php">Dashboard</a>
               </li>
             </ul>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
+            <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>-->
           </div>
         </nav>
       

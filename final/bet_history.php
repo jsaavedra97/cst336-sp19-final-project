@@ -74,7 +74,7 @@
                 <a class="nav-link" href="dashboard.php">Dashboard</a>
               </li>
             </ul>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
+            <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>-->
           </div>
         </nav>
       
@@ -86,7 +86,7 @@
           <p class="centered"><a href="img/tbd.jpeg"><img src="img/tbd.jpeg" class="img-circle" width="80"></a></p>
           <h5 id="sidebarEmail" class="centered"></h5>
           <li class="mt">
-            <a class="active" href="">
+            <a class="active" href="dashboard.php">
               <i class="fa fa-dashboard"></i>
               <span>Home</span>
               </a>
@@ -112,7 +112,7 @@
     <section id="main-content">
       <section class="wrapper">
         
-            <h1>Dashboard</h1>
+            <h1>Bet History</h1>
             <div>
                 <button id="search" class="btn btn-danger">Search</button>
                 <button id="logoutButton" class="btn btn-danger">Logout</button>

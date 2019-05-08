@@ -120,7 +120,7 @@
                 <a class="nav-link" href="dashboard.php">Dashboard</a>
               </li>
             </ul>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" href="register.php">Sign Up</button>
             <!--<form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

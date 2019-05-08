@@ -41,3 +41,9 @@
 [07-May-2019 00:54:44 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
 [07-May-2019 00:54:44 UTC] PHP Stack trace:
 [07-May-2019 00:54:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
+[08-May-2019 06:52:55 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[08-May-2019 06:52:55 UTC] PHP Stack trace:
+[08-May-2019 06:52:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
+[08-May-2019 18:21:12 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[08-May-2019 18:21:12 UTC] PHP Stack trace:
+[08-May-2019 18:21:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
