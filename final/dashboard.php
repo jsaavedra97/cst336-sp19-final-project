@@ -30,8 +30,6 @@
                     }
                 });  
                 
-                
-                
           });
          
           
@@ -83,10 +81,10 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="img/tbd.jpeg"><img src="img/tbd.jpeg" class="img-circle" width="80"></a></p>
+          <p class="centered"><a href="img/tbd.jpg"><img src="img/tbd.jpg" class="img-circle" width="80"></a></p>
           <h5 id="sidebarEmail" class="centered"></h5>
           <li class="mt">
-            <a class="active" href="">
+            <a class="sub-menu" href="">
               <i class="fa fa-dashboard"></i>
               <span>Home</span>
               </a>
@@ -96,14 +94,12 @@
               <i class="fa fa-cogs"></i>
               <span>Previous bets</span>
               </a>
-            
           </li>
           <li class="sub-menu">
             <a href="settings.php">
               <i class="fa fa-book"></i>
               <span>Settings</span>
               </a>
-            
           </li>
         </ul>
         <!-- sidebar menu end-->

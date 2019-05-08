@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="bootstrap/bootstrap.css">
         
         <style>
             .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -137,7 +138,7 @@
         <div class="text-center">
             <form class="form-signin" style="background-color: #000;">
                 <h1>E-Bet</h1>
-                <img class="mb-4" src="img/tbd.jpeg" alt="" width="72" height="72">
+                <img class="mb-4" src="img/tbd.jpg" alt="" width="72" height="72">
                 <h1 class="h3 mb-3 font-weight-normal" style="color:rgb(256,256,256);">Please sign in</h1>
                 <label for="inputEmail" class="sr-only">Email address</label>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="email_address" required autofocus>

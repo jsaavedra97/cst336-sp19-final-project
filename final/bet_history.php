@@ -86,24 +86,22 @@
           <p class="centered"><a href="img/tbd.jpeg"><img src="img/tbd.jpeg" class="img-circle" width="80"></a></p>
           <h5 id="sidebarEmail" class="centered"></h5>
           <li class="mt">
-            <a class="active" href="dashboard.php">
+            <a class="sub-menu" href="dashboard.php">
               <i class="fa fa-dashboard"></i>
               <span>Home</span>
               </a>
           </li>
-          <li class="sub-menu">
+          <li class="active">
             <a href="bet_history.php">
               <i class="fa fa-cogs"></i>
               <span>Previous bets</span>
               </a>
-            
           </li>
           <li class="sub-menu">
             <a href="settings.php">
               <i class="fa fa-book"></i>
               <span>Settings</span>
               </a>
-            
           </li>
         </ul>
         <!-- sidebar menu end-->
