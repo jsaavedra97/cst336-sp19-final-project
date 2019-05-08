@@ -1,6 +1,5 @@
 <?php
 
-
     //echo htmlentities($_GET[/lol/champions?filter[name]=Brand,Twitch&filter[armor]=21&token=401JNf8sytFd4p0cwE0lsLw3CsfW8xfWvG85vm8OdRKbPnLzVGk]);
 ?>
 
@@ -104,7 +103,7 @@
     <body>
         
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">E-Bet</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -118,15 +117,7 @@
                 <a class="nav-link" href="matches.php">Matches</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Disabled</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+                <a class="nav-link" href="dashboard.php">Dashboard</a>
               </li>
             </ul>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
@@ -145,7 +136,7 @@
         <div class="bgimg-1">
         <div class="text-center">
             <form class="form-signin" style="background-color: #000;">
-                <h1>Esports Betting</h1>
+                <h1>E-Bet</h1>
                 <img class="mb-4" src="img/tbd.jpeg" alt="" width="72" height="72">
                 <h1 class="h3 mb-3 font-weight-normal" style="color:rgb(256,256,256);">Please sign in</h1>
                 <label for="inputEmail" class="sr-only">Email address</label>

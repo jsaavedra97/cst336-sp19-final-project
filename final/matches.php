@@ -1,7 +1,7 @@
 <?php
-
-
-    //echo htmlentities($_GET[/lol/champions?filter[name]=Brand,Twitch&filter[armor]=21&token=401JNf8sytFd4p0cwE0lsLw3CsfW8xfWvG85vm8OdRKbPnLzVGk]);
+  session_start();
+  
+    
 ?>
 
 <html>
@@ -39,12 +39,88 @@
         
         <script>
             $(document).ready(function() {
+                $("#csgo_load").on("click", function() {
                 $.ajax({
                 type: "GET",
-                url: "getCurl.php",
+                url: "api/getCurl.php",
+                dataType: "json",
+                success: function(data, status) {
+                    $("#div").html('');
+                    console.log(data);
+                    data.forEach(function(key){
+                        console.log(key);
+                        if(!key.opponents[0] && !key.opponents[1]){
+                            console.log(key);
+                        } else if (!key.opponents[0]){
+                            $("#div").append("<div class='container' id='" + key.id + "'>");
+                            $("#" + key.id).append("<div><img class='img1' id='tbd' src='img/tbd.jpeg' width='100px' height='100px'/><h4>TBD</h4></div>");
+                            $("#" + key.id).append("<h2>  VERSUS  </h2>");
+                            $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[1].opponent.name + "</h4></div>");
+                            $("#div").append("</div>");
+                        } else if (!key.opponents[1]){
+                            $("#div").append("<div class='container' id='" + key.id + "'>");
+                            $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[0].opponent.name + "</h4></div>");
+                            $("#" + key.id).append("<h2>  VERSUS  </h2>");
+                            $("#" + key.id).append("<div><img class='img2' id='tbd' src='img/tbd.jpeg' width='100px' height='100px'/><h4>TBD</h4></div>");
+                            $("#div").append("</div>");
+                        } else {
+                            $("#div").append("<div class='container' id='" + key.id + "'>");
+                            $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[0].opponent.name + "</h4></div>");
+                            $("#" + key.id).append("<h2>  VERSUS  </h2>");
+                            $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[1].opponent.name + "</h4></div>");
+                            $("#div").append("</div>");
+                        }
+                        
+                    });
+                }
+                });
+                });
+                
+                $("#lol_load").on("click",function() {
+                $.ajax({
+                type: "GET",
+                url: "api/getCurlLOL.php",
+                dataType: "json",
+                success: function(data, status) {
+                  $("#div").html('');
+                    console.log(data);
+                    data.forEach(function(key){
+                        console.log(key);
+                        if(!key.opponents[0] && !key.opponents[1]){
+                            console.log(key);
+                        } else if (!key.opponents[0]){
+                            $("#div").append("<div class='container' id='" + key.id + "'>");
+                            $("#" + key.id).append("<div><img class='img1' id='tbd' src='img/tbd.jpeg' width='100px' height='100px'/><h4>TBD</h4></div>");
+                            $("#" + key.id).append("<h2>  VERSUS  </h2>");
+                            $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[1].opponent.name + "</h4></div>");
+                            $("#div").append("</div>");
+                        } else if (!key.opponents[1]){
+                            $("#div").append("<div class='container' id='" + key.id + "'>");
+                            $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[0].opponent.name + "</h4></div>");
+                            $("#" + key.id).append("<h2>  VERSUS  </h2>");
+                            $("#" + key.id).append("<div><img class='img2' id='tbd' src='img/tbd.jpeg' width='100px' height='100px'/><h4>TBD</h4></div>");
+                            $("#div").append("</div>");
+                        } else {
+                            $("#div").append("<div class='container' id='" + key.id + "'>");
+                            $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[0].opponent.name + "</h4></div>");
+                            $("#" + key.id).append("<h2>  VERSUS  </h2>");
+                            $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[1].opponent.name + "</h4></div>");
+                            $("#div").append("</div>");
+                        }
+                        
+                    });
+                }
+                });
+                });
+                
+                $("#dota_load").on("click",function() {
+                $.ajax({
+                type: "GET",
+                url: "api/getCurlDota.php",
                 dataType: "json",
                 success: function(data, status) {
                     console.log(data);
+                    $("#div").html('');
                     data.forEach(function(key){
                         console.log(key);
                         if(!key.opponents[0] && !key.opponents[1]){
@@ -54,30 +130,35 @@
                             $("#" + key.id).append("<div><img class='img1' id='tbd' src='img/tbd.jpeg' width='100px' height='100px'/><h2>TBD</h2></div>");
                             $("#" + key.id).append("<h2>  VERSUS  </h2>");
                             $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h2>" + key.opponents[1].opponent.name + "</h2></div>");
-                            $("#div").append("</div>")
+                            $("#div").append("</div>");
                         } else if (!key.opponents[1]){
                             $("#div").append("<div class='container' id='" + key.id + "'>");
                             $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h2>" + key.opponents[0].opponent.name + "</h2></div>");
                             $("#" + key.id).append("<h2>  VERSUS  </h2>");
                             $("#" + key.id).append("<div><img class='img2' id='tbd' src='img/tbd.jpeg' width='100px' height='100px'/><h2>TBD</h2></div>");
-                            $("#div").append("</div>")
+                            $("#div").append("</div>");
                         } else {
                             $("#div").append("<div class='container' id='" + key.id + "'>");
                             $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h2>" + key.opponents[0].opponent.name + "</h2></div>");
                             $("#" + key.id).append("<h2>  VERSUS  </h2>");
                             $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h2>" + key.opponents[1].opponent.name + "</h2></div>");
-                            $("#div").append("</div>")
+                            $("#div").append("</div>");
                         }
                         
                     });
                 }
                 });
                 });
+                
+                });
+                
+               
+                
         </script>
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">E-Bet</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -87,32 +168,32 @@
               <li class="nav-item active">
                 <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="matches.php">Matches</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Disabled</a>
-              </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Matches</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a id="csgo_load" class="dropdown-item" >CSGO</a>
+                  <a id="lol_load" class="dropdown-item" href="javascript:void(0)">LOL</a>
+                  <a id="dota_load" class="dropdown-item" >Dota 2</a>
                 </div>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.php">Dashboard</a>
+              </li>
             </ul>
-            <!--<form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>-->
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
+            <div >
+              <button id="signInButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
+            </div>
           </div>
         </nav>
 
-        <div id="div">
+
+        <section id="main-content">
+          <section class="wrapper">
+            <div id="div">
             
-        </div>
+            </div>
+          </section>
+        </section>
     
     </body>
 

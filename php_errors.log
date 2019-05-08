@@ -1,0 +1,43 @@
+[06-May-2019 21:58:18 UTC] PHP Warning:  log() expects parameter 1 to be double, array given in /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php on line 4
+[06-May-2019 21:58:18 UTC] PHP Stack trace:
+[06-May-2019 21:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:0
+[06-May-2019 21:58:18 UTC] PHP   2. log() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:4
+[06-May-2019 21:58:20 UTC] PHP Warning:  log() expects parameter 1 to be double, array given in /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php on line 4
+[06-May-2019 21:58:20 UTC] PHP Stack trace:
+[06-May-2019 21:58:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:0
+[06-May-2019 21:58:20 UTC] PHP   2. log() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:4
+[06-May-2019 21:58:21 UTC] PHP Warning:  log() expects parameter 1 to be double, array given in /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php on line 4
+[06-May-2019 21:58:21 UTC] PHP Stack trace:
+[06-May-2019 21:58:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:0
+[06-May-2019 21:58:21 UTC] PHP   2. log() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:4
+[06-May-2019 21:58:22 UTC] PHP Warning:  log() expects parameter 1 to be double, array given in /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php on line 4
+[06-May-2019 21:58:22 UTC] PHP Stack trace:
+[06-May-2019 21:58:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:0
+[06-May-2019 21:58:22 UTC] PHP   2. log() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:4
+[06-May-2019 22:01:17 UTC] PHP Warning:  log() expects parameter 1 to be double, array given in /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php on line 4
+[06-May-2019 22:01:17 UTC] PHP Stack trace:
+[06-May-2019 22:01:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:0
+[06-May-2019 22:01:17 UTC] PHP   2. log() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:4
+[06-May-2019 22:01:19 UTC] PHP Warning:  log() expects parameter 1 to be double, array given in /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php on line 4
+[06-May-2019 22:01:19 UTC] PHP Stack trace:
+[06-May-2019 22:01:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:0
+[06-May-2019 22:01:19 UTC] PHP   2. log() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:4
+[06-May-2019 22:18:23 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[06-May-2019 22:18:23 UTC] PHP Stack trace:
+[06-May-2019 22:18:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
+[06-May-2019 22:18:49 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[06-May-2019 22:18:49 UTC] PHP Stack trace:
+[06-May-2019 22:18:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
+[06-May-2019 22:18:51 UTC] PHP Warning:  log() expects parameter 1 to be double, array given in /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php on line 4
+[06-May-2019 22:18:51 UTC] PHP Stack trace:
+[06-May-2019 22:18:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:0
+[06-May-2019 22:18:51 UTC] PHP   2. log() /home/ubuntu/workspace/cst336-sp19-final-project/final/matches.php:4
+[06-May-2019 22:27:42 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[06-May-2019 22:27:42 UTC] PHP Stack trace:
+[06-May-2019 22:27:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
+[06-May-2019 22:32:39 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[06-May-2019 22:32:39 UTC] PHP Stack trace:
+[06-May-2019 22:32:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
+[07-May-2019 00:54:44 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[07-May-2019 00:54:44 UTC] PHP Stack trace:
+[07-May-2019 00:54:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
