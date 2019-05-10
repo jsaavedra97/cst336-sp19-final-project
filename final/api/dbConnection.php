@@ -1,5 +1,4 @@
 <?php
-
 function getDatabaseConnection($dbname = 'final'){
    $host = 'localhost';
    $username = 'root';
@@ -8,7 +7,7 @@ function getDatabaseConnection($dbname = 'final'){
    if(strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
        $host = $url["host"];
-       $db = substr($url["path"], 1);
+       $dbname = substr($url["path"], 1);
        $user = $url["user"];
        $pass = $url["pass"];
    }
