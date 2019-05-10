@@ -144,29 +144,30 @@
                         } else if (!key.opponents[0]){
                             $("#div").append("<div class='container' id='" + key.id + "'>");
                             $("#" + key.id).append("<div><img class='img1' id='tbd' src='img/tbd.jpeg' width='100px' height='100px'/><h4>TBD</h4></div>");
-                            $("#" + key.id).append("<h2>  VERSUS  </h2> ");
+                            $("#" + key.id).append("<div style='text-align:center;'><h2>VERSUS</h2> <h2>BET</h2></div> ");
                             $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[1].opponent.name + "</h4></div>");
                             $("#div").append("</div>");
                         } else if (!key.opponents[1]){
                             $("#div").append("<div class='container' id='" + key.id + "'>");
                             $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[0].opponent.name + "</h4></div>");
-                            $("#" + key.id).append("<h2>  VERSUS  </h2>");
+                            $("#" + key.id).append("<div style='text-align:center;'><h2>VERSUS</h2> <h2>BET</h2></div>");
                             $("#" + key.id).append("<div><img class='img2' id='tbd' src='img/tbd.jpeg' width='100px' height='100px'/><h4>TBD</h4></div>");
                             $("#div").append("</div>");
                         } else {
                             $("#div").append("<div class='container' id='" + key.id + "'>");
                             $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[0].opponent.name + "</h4></div>");
-                            $("#" + key.id).append("<a href='#' data-toggle='modal' data-target='#" + key.id + "Modal'><h2>  VERSUS  </h2></a> <div id='"+ key.id +"Modal' class='modal'><form class='modal-content animate'><div class='imgcontainer'><span onclick='document.getElementById('" + key.id + "Modal').style.display='none'' class='close' title='Close Modal'>&times;</span></div><div class='container'><label for='uname'><b>Username</b></label><input type='text' placeholder='Enter Username' name='uname' required><label for='psw'><b>Password</b></label><input type='password' placeholder='Enter Password' name='psw' required><button type='submit'>Login</button></div><div class='container1' style='background-color:#f1f1f1'><button type='button' onclick='document.getElementById('"+key.id+"Modal').style.display='none'' class='cancelbtn'>Cancel</button></div></form></div>");
+                            $("#" + key.id).append("<div style='text-align:center;'><h2>VERSUS</h2><a id='" + key.id + "Modal' href='#' data-toggle='modal' data-target='myModal'> <h2>BET</h2></a></div>");
+                            //$("#" + key.id).append("<div><a href='#' data-toggle='modal' data-target='#" + key.id + "Modal'><h2>BET</h2></a><h2>VERSUS</h2><div id='"+ key.id +"Modal' class='modal'><form class='modal-content animate'><div class='imgcontainer'><span onclick='document.getElementById('" + key.id + "Modal').style.display='none'' class='close' title='Close Modal'>&times;</span></div><div class='container'><label for='uname'><b>Username</b></label><input type='text' placeholder='Enter Username' name='uname' required><label for='psw'><b>Password</b></label><input type='password' placeholder='Enter Password' name='psw' required><button type='submit'>Login</button></div><div class='container1' style='background-color:#f1f1f1'><button type='button' onclick='document.getElementById('"+key.id+"Modal').style.display='none'' class='cancelbtn'>Cancel</button></div></form></div></div>");
                             $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[1].opponent.name + "</h4></div>");
                             $("#div").append("</div>");
-                             var modal = document.getElementById(key.id + "Modal");
+                            /*var modal = document.getElementById(key.id + "Modal");
 
 
                                 window.onclick = function(event) {
                                     if (event.target == modal) {
                                         modal.style.display = "none";
                                     }
-                                };
+                                };*/
                             
                         }
                         
@@ -174,6 +175,8 @@
                 }
                 });
                 });
+                
+                $("#")
                 
                 $("#lol_load").on("click",function() {
                 $.ajax({
@@ -280,7 +283,7 @@
               </li>
             </ul>
             <div >
-              <button id="signInButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
+              <!--<button id="signInButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>-->
             </div>
           </div>
         </nav>
@@ -289,23 +292,30 @@
         <section id="main-content">
           <section class="wrapper">
             <div id="div">
-                
+                <button></button>
             </div>
           </section>
         </section>
     
-
-    <script>
-// Get the modal
-  /*  var modal = document.getElementById("544099Modal");
-
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    };*/
-</script>
+      
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                      ...
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+              </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+      </div>
+                            
     
     </body>
 

@@ -1,6 +1,7 @@
 <?php
   session_start();
-
+  
+  
   $httpMethod = strtoupper($_SERVER['REQUEST_METHOD']);
 
   switch($httpMethod) {
@@ -36,6 +37,8 @@
 
       $sql = "SELECT * FROM user " .
              "WHERE email_address = :email_address ";
+      
+      $_SESSION["email_address"] = ":email_address";
       
       $stmt = $dbConn->prepare($sql);
       $stmt->execute(array (":email_address" => $_POST['email_address']));

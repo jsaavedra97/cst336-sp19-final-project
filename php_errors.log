@@ -53,3 +53,21 @@
 [08-May-2019 20:18:27 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
 [08-May-2019 20:18:27 UTC] PHP Stack trace:
 [08-May-2019 20:18:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
+[08-May-2019 21:52:59 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[08-May-2019 21:52:59 UTC] PHP Stack trace:
+[08-May-2019 21:52:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
+[08-May-2019 21:59:10 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[08-May-2019 21:59:10 UTC] PHP Stack trace:
+[08-May-2019 21:59:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
+[09-May-2019 08:13:16 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[09-May-2019 08:13:16 UTC] PHP Stack trace:
+[09-May-2019 08:13:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
+[09-May-2019 08:27:39 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[09-May-2019 08:27:39 UTC] PHP Stack trace:
+[09-May-2019 08:27:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
+[09-May-2019 08:52:47 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[09-May-2019 08:52:47 UTC] PHP Stack trace:
+[09-May-2019 08:52:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0
+[10-May-2019 01:27:22 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[10-May-2019 01:27:22 UTC] PHP Stack trace:
+[10-May-2019 01:27:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0

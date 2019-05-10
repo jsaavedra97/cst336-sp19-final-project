@@ -1,11 +1,9 @@
 <?php
 
 function getDatabaseConnection($dbname = 'final'){
-
    $host = 'localhost';
    $username = 'root';
    $password = '';
-
    //checking whether the URL contains "herokuapp" (using Heroku)
    if(strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -14,7 +12,6 @@ function getDatabaseConnection($dbname = 'final'){
        $user = $url["user"];
        $pass = $url["pass"];
    }
-
    $dsn = "mysql:host=$host;dbname=$dbname";
    $opt = [
    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -24,5 +21,4 @@ function getDatabaseConnection($dbname = 'final'){
    $pdo = new PDO($dsn, $user, $pass, $opt);
    return $pdo;
 }
-
 ?>

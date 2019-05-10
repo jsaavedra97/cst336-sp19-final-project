@@ -59,7 +59,7 @@
                         } else {
                             $("#div").append("<div class='container' id='" + key.id + "'>");
                             $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h2>" + key.opponents[0].opponent.name + "</h2></div>");
-                            $("#" + key.id).append("<h2>  VERSUS  </h2>");
+                            $("#" + key.id).append("<div><h2>  VERSUS  </h2><h2>BET</h2></div>");
                             $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h2>" + key.opponents[1].opponent.name + "</h2></div>");
                             $("#div").append("</div>")
                         }
@@ -121,11 +121,7 @@
                 <a class="nav-link" href="dashboard.php">Dashboard</a>
               </li>
             </ul>
-            <button class="btn btn-outline-success my-2 my-sm-0" href="register.php">Sign Up</button>
-            <!--<form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>-->
+            <!--<button class="btn btn-outline-success my-2 my-sm-0" href="register.php">Sign Up</button>-->
           </div>
         </nav>
 
@@ -149,11 +145,11 @@
                     <!--<div>
                         <a href="/signup.php">Sign-Up</a>
                     </div>-->
-                    <div class="checkbox mb-3">
+                    <!--<div class="checkbox mb-3">
                         <label style="color:rgb(256,256,256);">
                             <input type="checkbox" value="remember-me"> Remember me
                         </label>
-                    </div>
+                    </div>-->
                 <button id="loginButton" type="button" class="btn btn-lg btn-primary btn-block">Sign in</button>
                 <p id="message" class="mt-5 mb-3 text-muted" role="alert"></p>
                 <p class="mt-5 mb-3 text-muted" style="color:rgb(256,256,256);">&copy; 2018-2019</p>
