@@ -46,3 +46,9 @@ Stack trace:
 #1 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/emailCheck.php(6): getDatabaseConnection('final')
 #2 {main}
   thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/dbConnection.php on line 21
+[10-May-2019 01:42:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/dbConnection.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/dbConnection.php(20): PDO->__construct('mysql:host=loca...', NULL, NULL, Array)
+#1 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/emailCheck.php(6): getDatabaseConnection('final')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/dbConnection.php on line 20
