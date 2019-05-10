@@ -40,12 +40,20 @@
       
       $_SESSION["email_address"] = ":email_address";
       
+      $enteredPassword = $_POST["password"];
+      //console.log($enteredPassword);
+      
+      $options = [
+          'cost' => 11,
+      ];
+      $hashedPassword = password_hash($enteredPassword, PASSWORD_BCRYPT, $options);
+      
       $stmt = $dbConn->prepare($sql);
       $stmt->execute(array (":email_address" => $_POST['email_address']));
       
       $record = $stmt->fetch();
       
-      $isAuthenticated = password_verify($_POST["password"], $record["password"]);
+      $isAuthenticated = password_verify($hashedPassword, $record["password"]);
         
       if ($isAuthenticated) {
         $_SESSION["email_address"] = $record["email_address"];

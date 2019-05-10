@@ -52,3 +52,87 @@ Stack trace:
 #1 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/emailCheck.php(6): getDatabaseConnection('final')
 #2 {main}
   thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/dbConnection.php on line 20
+[10-May-2019 17:58:37 UTC] PHP Warning:  require_once(connection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 3
+[10-May-2019 17:58:37 UTC] PHP Stack trace:
+[10-May-2019 17:58:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 17:58:37 UTC] PHP Fatal error:  require_once(): Failed opening required 'connection.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 3
+[10-May-2019 17:58:37 UTC] PHP Stack trace:
+[10-May-2019 17:58:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:25:13 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:25:13 UTC] PHP Stack trace:
+[10-May-2019 18:25:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:26:03 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:26:03 UTC] PHP Stack trace:
+[10-May-2019 18:26:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:28:05 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:28:05 UTC] PHP Stack trace:
+[10-May-2019 18:28:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:29:23 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:29:23 UTC] PHP Stack trace:
+[10-May-2019 18:29:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:31:02 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:31:02 UTC] PHP Stack trace:
+[10-May-2019 18:31:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:31:15 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:31:15 UTC] PHP Stack trace:
+[10-May-2019 18:31:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:31:43 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:31:43 UTC] PHP Stack trace:
+[10-May-2019 18:31:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:36:08 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:36:08 UTC] PHP Stack trace:
+[10-May-2019 18:36:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:36:10 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:36:10 UTC] PHP Stack trace:
+[10-May-2019 18:36:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:37:35 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:37:35 UTC] PHP Stack trace:
+[10-May-2019 18:37:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:37:37 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:37:37 UTC] PHP Stack trace:
+[10-May-2019 18:37:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:37:37 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:37:37 UTC] PHP Stack trace:
+[10-May-2019 18:37:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:37:37 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:37:37 UTC] PHP Stack trace:
+[10-May-2019 18:37:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:37:38 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:37:38 UTC] PHP Stack trace:
+[10-May-2019 18:37:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:37:38 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:37:38 UTC] PHP Stack trace:
+[10-May-2019 18:37:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:37:38 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:37:38 UTC] PHP Stack trace:
+[10-May-2019 18:37:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:37:39 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:37:39 UTC] PHP Stack trace:
+[10-May-2019 18:37:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:40:51 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:40:51 UTC] PHP Stack trace:
+[10-May-2019 18:40:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:40:52 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:40:52 UTC] PHP Stack trace:
+[10-May-2019 18:40:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:41:00 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:41:00 UTC] PHP Stack trace:
+[10-May-2019 18:41:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:41:01 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:41:01 UTC] PHP Stack trace:
+[10-May-2019 18:41:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 18:42:03 UTC] PHP Fatal error:  Call to undefined function get_database_connection() in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php on line 62
+[10-May-2019 18:42:03 UTC] PHP Stack trace:
+[10-May-2019 18:42:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php:0
+[10-May-2019 19:17:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/dbConnection.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/dbConnection.php(20): PDO->__construct('mysql:host=loca...', NULL, NULL, Array)
+#1 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php(61): getDatabaseConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/dbConnection.php on line 20
+[10-May-2019 19:18:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/dbConnection.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/dbConnection.php(20): PDO->__construct('mysql:host=loca...', NULL, NULL, Array)
+#1 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php(61): getDatabaseConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/dbConnection.php on line 20
