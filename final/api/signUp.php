@@ -48,7 +48,7 @@ require_once 'dbConnection.php';
         return;
       }    */
       
-      $postedPassword = $_POST["password"][0];
+      $postedPassword = $_POST["password"];
       // Use BCrypt password hashing
       $options = [
           'cost' => 11,

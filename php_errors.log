@@ -127,3 +127,6 @@ Stack trace:
 [10-May-2019 19:32:05 UTC] PHP Stack trace:
 [10-May-2019 19:32:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/login.php:0
 [10-May-2019 19:32:05 UTC] PHP   2. log() /home/ubuntu/workspace/cst336-sp19-final-project/final/login.php:44
+[10-May-2019 19:39:29 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php on line 6
+[10-May-2019 19:39:29 UTC] PHP Stack trace:
+[10-May-2019 19:39:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336-sp19-final-project/final/logout.php:0

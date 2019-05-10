@@ -114,16 +114,6 @@
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="email_address" required autofocus>
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
-                <!--<label for="inputPasswordCheck" class="sr-only">Re-Enter Password</label>
-                <input type="password" id="inputPasswordCheck" class="form-control" placeholder="Re-Enter Password" required>-->
-                    <!--<div>
-                        <a href="/signup.php">Sign-Up</a>
-                    </div>-->
-                    <!--<div class="checkbox mb-3">
-                        <label style="color:rgb(256,256,256);">
-                            <input type="checkbox" value="remember-me"> Remember me
-                        </label>
-                    </div>-->
                 <button id="loginButton" type="button" class="btn btn-lg btn-primary btn-block">Sign in</button>
                 <button id="signUpButton" type="button" class="btn btn-lg btn-primary btn-block">Signup</button>
                 <p id="message" class="mt-5 mb-3 text-muted" role="alert"></p>
