@@ -136,3 +136,11 @@ Stack trace:
 #1 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/signUp.php(61): getDatabaseConnection()
 #2 {main}
   thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/dbConnection.php on line 20
+[11-May-2019 03:18:54 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/currentBet.php on line 66
+[11-May-2019 03:18:59 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/currentBet.php on line 66
+[11-May-2019 03:20:05 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/currentBet.php on line 65
+[11-May-2019 03:20:06 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/currentBet.php on line 65
+[11-May-2019 03:20:11 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/currentBet.php on line 65
+[11-May-2019 03:20:55 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/currentBet.php on line 65
+[11-May-2019 03:20:55 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/currentBet.php on line 65
+[11-May-2019 03:20:56 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/currentBet.php on line 65
