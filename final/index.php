@@ -89,9 +89,14 @@
                             }
                         },
                         complete: function(data, status) { //optional, used for debugging purposes
-                            console.log(complete);
+                            // console.log(complete);
                         }
                     });
+                });
+                
+                $("#signUpButton").on('click', function(e){
+                    console.log("success");
+                    window.location = "signup.php";
                 });
                
               });
@@ -151,6 +156,7 @@
                         </label>
                     </div>-->
                 <button id="loginButton" type="button" class="btn btn-lg btn-primary btn-block">Sign in</button>
+                <button id="signUpButton" type="button" class="btn btn-lg btn-primary btn-block">Sign Up</button>
                 <p id="message" class="mt-5 mb-3 text-muted" role="alert"></p>
                 <p class="mt-5 mb-3 text-muted" style="color:rgb(256,256,256);">&copy; 2018-2019</p>
             </form>

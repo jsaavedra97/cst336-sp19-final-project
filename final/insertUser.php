@@ -1,7 +1,8 @@
 <?php
+  // Not done, getting some type of access error
+  include "api/dbConnection.php";
   session_start();
-  
-  
+
   $httpMethod = strtoupper($_SERVER['REQUEST_METHOD']);
 
   switch($httpMethod) {
@@ -17,10 +18,8 @@
       echo "Not Supported";
       break;
     case 'POST':
-      // Get the body json that was sent
+      // echo "cheese";
       $rawJsonString = file_get_contents("php://input");
-
-      //var_dump($rawJsonString);
 
       // Make it a associative array (true, second param)
       $jsonData = json_decode($rawJsonString, true);
@@ -28,39 +27,39 @@
       // TODO: do stuff to get the $results which is an associative array
       $host = "127.0.0.1";
       $dbname = "final";
+      // Comment and uncomment appropriate local database name
       $username = "straderz";
       // $username = "joshsaavedra";
       $password = "";
   
-      // Get Data from DB
-      $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-      $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-
-      $sql = "SELECT * FROM user " .
-             "WHERE email_address = :email_address ";
-      
-      $_SESSION["email_address"] = ":email_address";
-      
-      $stmt = $dbConn->prepare($sql);
-      $stmt->execute(array (":email_address" => $_POST['email_address']));
-      
-      $record = $stmt->fetch();
-      
-      $isAuthenticated = password_verify($_POST["password"], $record["password"]);
+      $db = getDatabaseConnection();
+      try{
+        $query  = "INSERT INTO `users` (email_address, password, id) VALUES (jsaavedra@csumb.edu, cheese, 21)";
+        $statement = $db->prepare($query);
+        $statement->execute(array(
+          ":email_address" => $_POST['email'],
+          ":password" => $_POST['password'],
+          ":id" => $_POST[21]
+          ));
         
-      if ($isAuthenticated) {
-        $_SESSION["email_address"] = $record["email_address"];
-        //$_SESSION["isAdmin"] = $record["isAdmin"];
+        $_SESSION["email_address"] = $_POST['email'];
+
+        echo json_encode($records);
       }
       
-      // Allow any client to access
-      header("Access-Control-Allow-Origin: *");
-      // Let the client know the format of the data being returned
-      header("Content-Type: application/json");
-
-      // Sending back down as JSON
-      echo json_encode(array("isAuthenticated" => $isAuthenticated));
-
+      catch (PDOException $ex) {
+        switch ($ex->getCode()) {
+          case "23000":
+            echo json_encode(array(
+              "details" => $ex->getMessage()));
+            break;
+          default:
+            echo json_encode(array(
+              "details" => $ex->getMessage()));
+            break;
+        }
+        exit;
+      }
       break;
     case 'PUT':
       // TODO: Access-Control-Allow-Origin
