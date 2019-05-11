@@ -1,5 +1,5 @@
-
 <?php
+
     //echo htmlentities($_GET[/lol/champions?filter[name]=Brand,Twitch&filter[armor]=21&token=401JNf8sytFd4p0cwE0lsLw3CsfW8xfWvG85vm8OdRKbPnLzVGk]);
 ?>
 
@@ -34,32 +34,37 @@
         
         <script>
             $(document).ready(function() {
-            
                 
-                $("#signUpButton").on('click', function(e) {
-                    let email_address = $("input[name='email_address']").val();
-                    let password = $("input[name='password']").val();
-        
-                    console.log(email_address + ' ' + password);
-                    
+               $("#loginButton").on('click', function(e) {
                     $.ajax({
                         type: "post",
-                        url: "api/signUp.php",
-                        dataType: "text",
+                        url: "login.php",
+                        dataType: "json",
                         data: {
-                            "email_address": email_address,
-                            "password": password,
+                            "email_address": $("input[name='email_address']").val(),
+                            "password": $("input[name='password']").val(),
                         },
                         success: function(data, status) {
-                                console.log(data);
-                                window.location = "index.php";
+                            console.log(data);
+                            if (data.isAuthenticated) {
+                                window.location = "dashboard.php";
+                                console.log("in success");
+                            } else {
+                                $("#message").html("Bad email or password");
+                                $("#message").removeClass("open-hidden");
+                                console.log("in bad");
+                            }
                         },
                         complete: function(data, status) { //optional, used for debugging purposes
-                            //console.log(data);
+                            console.log(data);
                             console.log(status);
                         }
                     });
+                });
+                
+                $("#signUpButton").on('click', function(e) {
                     
+                    window.location ="signup.php";
                 });
                 
                
@@ -109,9 +114,7 @@
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="email_address" required autofocus>
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
-                <label for="inputPasswordCheck" class="sr-only">Re-Enter Password</label>
-                <input type="password" id="inputPasswordCheck" class="form-control" placeholder="Re-Enter Password" required>
-                    
+                <button id="loginButton" type="button" class="btn btn-lg btn-primary btn-block">Sign in</button>
                 <button id="signUpButton" type="button" class="btn btn-lg btn-primary btn-block">Signup</button>
                 <p id="message" class="mt-5 mb-3 text-muted" role="alert"></p>
                 <p class="mt-5 mb-3 text-muted" style="color:rgb(256,256,256);">&copy; 2018-2019</p>
@@ -127,7 +130,3 @@
         
     </body>
 </html>
-
-
-
-<!---->

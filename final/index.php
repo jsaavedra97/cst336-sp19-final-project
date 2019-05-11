@@ -1,5 +1,4 @@
 <?php
-
     //echo htmlentities($_GET[/lol/champions?filter[name]=Brand,Twitch&filter[armor]=21&token=401JNf8sytFd4p0cwE0lsLw3CsfW8xfWvG85vm8OdRKbPnLzVGk]);
 ?>
 
@@ -34,40 +33,7 @@
         
         <script>
             $(document).ready(function() {
-                $.ajax({
-                type: "GET",
-                url: "getCurl.php",
-                dataType: "json",
-                success: function(data, status) {
-                    //console.log(data);
-                    data.forEach(function(key){
-                        //console.log(key);
-                        if(!key.opponents[0] && !key.opponents[1]){
-                            console.log("if again");
-                        } else if (!key.opponents[0]){
-                            $("#div").append("<div class='container' id='" + key.id + "'>");
-                            $("#" + key.id).append("<div><img class='img1' src='img/tbd.jpeg' width='100px' height='100px'/><h2>TBD</h2></div>");
-                            $("#" + key.id).append("<h2>  VERSUS  </h2>");
-                            $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h2>" + key.opponents[1].opponent.name + "</h2></div>");
-                            $("#div").append("</div>")
-                        } else if (!key.opponents[1]){
-                            $("#div").append("<div class='container' id='" + key.id + "'>");
-                            $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h2>" + key.opponents[0].opponent.name + "</h2></div>");
-                            $("#" + key.id).append("<h2>  VERSUS  </h2>");
-                            $("#" + key.id).append("<div><img class='img2' src='img/tbd.jpeg' width='100px' height='100px'/><h2>TBD</h2></div>");
-                            $("#div").append("</div>")
-                        } else {
-                            $("#div").append("<div class='container' id='" + key.id + "'>");
-                            $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h2>" + key.opponents[0].opponent.name + "</h2></div>");
-                            $("#" + key.id).append("<div><h2>  VERSUS  </h2><h2>BET</h2></div>");
-                            $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h2>" + key.opponents[1].opponent.name + "</h2></div>");
-                            $("#div").append("</div>")
-                        }
-                        
-                    });
-                }
-                });
-               
+                
                $("#loginButton").on('click', function(e) {
                     $.ajax({
                         type: "post",
@@ -89,15 +55,17 @@
                             }
                         },
                         complete: function(data, status) { //optional, used for debugging purposes
-                            // console.log(complete);
+                            console.log(data);
+                            console.log(status);
                         }
                     });
                 });
                 
-                $("#signUpButton").on('click', function(e){
-                    console.log("success");
-                    window.location = "signup.php";
+                $("#signUpButton").on('click', function(e) {
+                    
+                    window.location ="signup.php";
                 });
+                
                
               });
                 
@@ -145,18 +113,8 @@
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="email_address" required autofocus>
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
-                <!--<label for="inputPasswordCheck" class="sr-only">Re-Enter Password</label>
-                <input type="password" id="inputPasswordCheck" class="form-control" placeholder="Re-Enter Password" required>-->
-                    <!--<div>
-                        <a href="/signup.php">Sign-Up</a>
-                    </div>-->
-                    <!--<div class="checkbox mb-3">
-                        <label style="color:rgb(256,256,256);">
-                            <input type="checkbox" value="remember-me"> Remember me
-                        </label>
-                    </div>-->
                 <button id="loginButton" type="button" class="btn btn-lg btn-primary btn-block">Sign in</button>
-                <button id="signUpButton" type="button" class="btn btn-lg btn-primary btn-block">Sign Up</button>
+                <button id="signUpButton" type="button" class="btn btn-lg btn-primary btn-block">Signup</button>
                 <p id="message" class="mt-5 mb-3 text-muted" role="alert"></p>
                 <p class="mt-5 mb-3 text-muted" style="color:rgb(256,256,256);">&copy; 2018-2019</p>
             </form>
@@ -165,7 +123,9 @@
         <!--<div id="div">
             
         </div>-->
-        
+        <script>
+            
+        </script>
         
     </body>
 </html>

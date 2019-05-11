@@ -3,7 +3,6 @@
   
   
   $httpMethod = strtoupper($_SERVER['REQUEST_METHOD']);
-
   switch($httpMethod) {
     case "OPTIONS":
       // Allows anyone to hit your API, not just this c9 domain
@@ -19,23 +18,19 @@
     case 'POST':
       // Get the body json that was sent
       $rawJsonString = file_get_contents("php://input");
-
       //var_dump($rawJsonString);
-
       // Make it a associative array (true, second param)
       $jsonData = json_decode($rawJsonString, true);
-
       // TODO: do stuff to get the $results which is an associative array
       $host = "127.0.0.1";
       $dbname = "final";
       $username = "straderz";
-      // $username = "joshsaavedra";
+      // $username= "joshaavedra";
       $password = "";
   
       // Get Data from DB
       $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
       $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-
       $sql = "SELECT * FROM user " .
              "WHERE email_address = :email_address ";
       
@@ -57,10 +52,8 @@
       header("Access-Control-Allow-Origin: *");
       // Let the client know the format of the data being returned
       header("Content-Type: application/json");
-
       // Sending back down as JSON
       echo json_encode(array("isAuthenticated" => $isAuthenticated));
-
       break;
     case 'PUT':
       // TODO: Access-Control-Allow-Origin

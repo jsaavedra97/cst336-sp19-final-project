@@ -52,3 +52,23 @@ Stack trace:
 #1 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/emailCheck.php(6): getDatabaseConnection('final')
 #2 {main}
   thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/dbConnection.php on line 20
+[11-May-2019 05:29:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/ubuntu/workspace/final/api/signUp.php:69
+Stack trace:
+#0 /home/ubuntu/workspace/final/api/signUp.php(69): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/final/api/signUp.php on line 69
+[11-May-2019 05:29:49 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/ubuntu/workspace/final/api/signUp.php:69
+Stack trace:
+#0 /home/ubuntu/workspace/final/api/signUp.php(69): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/final/api/signUp.php on line 69
+[11-May-2019 05:29:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/ubuntu/workspace/final/api/signUp.php:69
+Stack trace:
+#0 /home/ubuntu/workspace/final/api/signUp.php(69): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/final/api/signUp.php on line 69
+[11-May-2019 05:29:56 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/ubuntu/workspace/final/api/signUp.php:69
+Stack trace:
+#0 /home/ubuntu/workspace/final/api/signUp.php(69): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/final/api/signUp.php on line 69

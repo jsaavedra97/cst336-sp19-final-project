@@ -13,14 +13,14 @@
       $host = "127.0.0.1";
       $dbname = "final";
       $username = "straderz";
-      // $username = "joshsaavedra"; 
+      // $username= "joshaavedra";
       $password = "";
   
       // Get Data from DB
       $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
       $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
       $email = $_SESSION['email_address'];
-      $sql = "SELECT * FROM history NATURAL JOIN user WHERE history.email_address=user.email_address AND user.email_address = " . $email;
+      $sql = "SELECT * FROM current_bet WHERE email_address =" . $email;
       
       
       $_SESSION["email_address"] = ":email_address";

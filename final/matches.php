@@ -97,34 +97,8 @@
               color: red;
               cursor: pointer;
             }
-            
-            /* Add Zoom Animation */
-            .animate {
-              -webkit-animation: animatezoom 0.6s;
-              animation: animatezoom 0.6s
-            }
-            
-            @-webkit-keyframes animatezoom {
-              from {-webkit-transform: scale(0)} 
-              to {-webkit-transform: scale(1)}
-            }
-              
-            @keyframes animatezoom {
-              from {transform: scale(0)} 
-              to {transform: scale(1)}
-            }
-            
-            /* Change styles for span and cancel button on extra small screens */
-            @media screen and (max-width: 300px) {
-              span.psw {
-                 display: block;
-                 float: none;
-              }
-              .cancelbtn {
-                 width: 100%;
-              }
-            }
-                        
+          
+               
         </style>
         
         <script>
@@ -137,6 +111,7 @@
                 success: function(data, status) {
                     $("#div").html('');
                     console.log(data);
+                    var i = 0;
                     data.forEach(function(key){
                         console.log(key);
                         if(!key.opponents[0] && !key.opponents[1]){
@@ -144,25 +119,26 @@
                         } else if (!key.opponents[0]){
                             $("#div").append("<div class='container' id='" + key.id + "'>");
                             $("#" + key.id).append("<div><img class='img1' id='tbd' src='img/tbd.jpeg' width='100px' height='100px'/><h4>TBD</h4></div>");
-                            $("#" + key.id).append("<div style='text-align:center;'><h2>VERSUS</h2> <h2>BET</h2></div> ");
+                            $("#" + key.id).append("<div style='text-align:center;'><h2>VERSUS</h2><a id='" + i + "Modal' href='bet.php'> <h2>BET</h2></a></div>");
                             $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[1].opponent.name + "</h4></div>");
                             $("#div").append("</div>");
+                            i += 1;
                         } else if (!key.opponents[1]){
                             $("#div").append("<div class='container' id='" + key.id + "'>");
                             $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[0].opponent.name + "</h4></div>");
-                            $("#" + key.id).append("<div style='text-align:center;'><h2>VERSUS</h2> <h2>BET</h2></div>");
+                            $("#" + key.id).append("<div style='text-align:center;'><h2>VERSUS</h2><a id='" + i + "Modal'> <h2>BET</h2></a></div>");
                             $("#" + key.id).append("<div><img class='img2' id='tbd' src='img/tbd.jpeg' width='100px' height='100px'/><h4>TBD</h4></div>");
                             $("#div").append("</div>");
+                            i += 1;
                         } else {
                             $("#div").append("<div class='container' id='" + key.id + "'>");
                             $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[0].opponent.name + "</h4></div>");
-                            $("#" + key.id).append("<div style='text-align:center;'><h2>VERSUS</h2><a id='" + key.id + "Modal' href='#' data-toggle='modal' data-target='myModal'> <h2>BET</h2></a></div>");
+                            $("#" + key.id).append("<div style='text-align:center;'><h2>VERSUS</h2><button id='" + i + "Modal'> BET</button></div>");
                             //$("#" + key.id).append("<div><a href='#' data-toggle='modal' data-target='#" + key.id + "Modal'><h2>BET</h2></a><h2>VERSUS</h2><div id='"+ key.id +"Modal' class='modal'><form class='modal-content animate'><div class='imgcontainer'><span onclick='document.getElementById('" + key.id + "Modal').style.display='none'' class='close' title='Close Modal'>&times;</span></div><div class='container'><label for='uname'><b>Username</b></label><input type='text' placeholder='Enter Username' name='uname' required><label for='psw'><b>Password</b></label><input type='password' placeholder='Enter Password' name='psw' required><button type='submit'>Login</button></div><div class='container1' style='background-color:#f1f1f1'><button type='button' onclick='document.getElementById('"+key.id+"Modal').style.display='none'' class='cancelbtn'>Cancel</button></div></form></div></div>");
                             $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[1].opponent.name + "</h4></div>");
                             $("#div").append("</div>");
+                            i += 1;
                             /*var modal = document.getElementById(key.id + "Modal");
-
-
                                 window.onclick = function(event) {
                                     if (event.target == modal) {
                                         modal.style.display = "none";
@@ -176,7 +152,6 @@
                 });
                 });
                 
-                $("#")
                 
                 $("#lol_load").on("click",function() {
                 $.ajax({
@@ -252,6 +227,8 @@
                 });
                 });
                 
+                
+                
                 });
                 
                
@@ -292,30 +269,17 @@
         <section id="main-content">
           <section class="wrapper">
             <div id="div">
-                <button></button>
+                
             </div>
           </section>
         </section>
-    
       
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                      <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                  </div>
-                  <div class="modal-body">
-                      ...
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-              </div><!-- /.modal-content -->
-          </div><!-- /.modal-dialog -->
-      </div>
-                            
+      <script>
+        $("#0Modal").on("click", function(){
+                 console.log("Modal");
+                 window.location = "bet.php";
+                });
+      </script>
     
     </body>
 
