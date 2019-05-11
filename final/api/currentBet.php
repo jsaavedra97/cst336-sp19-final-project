@@ -22,7 +22,7 @@
 
       $email = $_SESSION['email_address'];
 
-      $sql = "SELECT * FROM history NATURAL JOIN user WHERE history.email_address=user.email_address AND email_address = 'zstrader@csumb.edu'";
+      $sql = "SELECT * FROM current_bet WHERE email_address = 'zstrader@csumb.edu'";
       
       
       $_SESSION["email_address"] = ":email_address";

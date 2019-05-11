@@ -53,9 +53,7 @@
                         },
                         success: function(data, status) {
                                 console.log(data);
-                                //window.location = "dashboard.php";
-                                console.log("wrkded?");
-                            
+                                window.location = "index.php";
                         },
                         complete: function(data, status) { //optional, used for debugging purposes
                             //console.log(data);

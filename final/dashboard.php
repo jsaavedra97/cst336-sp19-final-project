@@ -21,14 +21,55 @@
         <script>
       
           $(document).ready(function() {
-                    $.ajax({
+              
+                $("#searchButton").on("click", function() {
+                console.log("in click");
+                $.ajax({
                     type: "GET",
-                    url: "emailCheck.php",
+                    url: "api/currentBet.php",
                     dataType: "json",
                     success: function(data, status) {
-                      console.log("in success");
+                      console.log(data);
+                      if (!data || data.length == 0) return;
+
+                        //var asOfDateFormatted = $.format.date(data.standings_date, "d-MMM-yy");
+
+                        // Insert the date
+                        //$('h1 > span').html(asOfDateFormatted);
+
+                        // Print the standings
+                          
+                          for (var i in data) {
+                            var key = data[i];
+                            $('#results > tbody')
+                                .append($('<tr>')
+                                    .append($('<td>')
+                                        .html(key.team1 + " vs " + key.team2)
+                                    )
+                                    .append($('<td>')
+                                        .html(key.amount)
+                                    )
+                                    .append($('<td>')
+                                        .html(key.pick)
+                                    )
+                                    .append($('<td>')
+                                        .html("???")
+                                    )
+                                    .append($('<td>')
+                                        .html(key.game)
+                                    )
+                                    
+                                );
+                        
+                          }
+                    },
+                    complete: function(data, status) { //optional, used for debugging purposes
+                        //console.log(data);
+                        console.log(status);
                     }
+                    
                 });  
+                });
                 
           });
          
@@ -109,8 +150,26 @@
       <section class="wrapper">
         
             <h1>Dashboard</h1>
+            
+            <div class="container">
+              <h1>Recent Bets<span></span></h1>
+                <div class="table-responsive">
+                  <table id="results" class="table table-hover">
+                      <thead>
+                          <th>Match</th>
+                          <th>Amount</th>
+                          <th>Team</th>
+                          <th>Result</th>
+                          <th>Game</th>
+                      </thead>
+                      <tbody></tbody>
+                  </table>
+                  <!--<img class="loading" src="loading_spinner.gif" />-->
+                </div>
+            </div>
+            
             <div>
-                <button id="search" class="btn btn-danger">Search</button>
+                <button id="searchButton" class="btn btn-danger">Search</button>
                 <button id="logoutButton" class="btn btn-danger">Logout</button>
             </div>
             <div>
