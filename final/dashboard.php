@@ -44,7 +44,7 @@
                             $('#results > tbody')
                                 .append($('<tr>')
                                     .append($('<td>')
-                                        .html(key.team1 + " vs " + key.team2)
+                                        .html(key.match_bet)
                                     )
                                     .append($('<td>')
                                         .html(key.amount)

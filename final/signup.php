@@ -29,6 +29,10 @@
               background-image: url("img/esports1.jpeg");
               height: 100%;
             }
+            .bgimg-2 {
+              background-image: url("img/esports2.jpg");
+              height: 100%;
+            }
  
         </style>
         
@@ -100,12 +104,12 @@
         <!--<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>-->
       </div>
         
-        <div class="bgimg-1">
+        <div class="bgimg-2">
         <div class="text-center">
             <form class="form-signin" style="background-color: #000;">
                 <h1>E-Bet</h1>
                 <img class="mb-4" src="img/tbd.jpg" alt="" width="72" height="72">
-                <h1 class="h3 mb-3 font-weight-normal" style="color:rgb(256,256,256);">Please sign in</h1>
+                <h1 class="h3 mb-3 font-weight-normal" style="color:rgb(256,256,256);">Sign Up</h1>
                 <label for="inputEmail" class="sr-only">Email address</label>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="email_address" required autofocus>
                 <label for="inputPassword" class="sr-only">Password</label>

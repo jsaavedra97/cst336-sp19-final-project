@@ -144,3 +144,88 @@ Stack trace:
 [11-May-2019 03:20:55 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/currentBet.php on line 65
 [11-May-2019 03:20:55 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/currentBet.php on line 65
 [11-May-2019 03:20:56 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/currentBet.php on line 65
+[11-May-2019 05:45:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 05:46:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 05:47:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'pick' cannot be null' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 05:49:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'pick' cannot be null' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 05:50:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'pick' cannot be null' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 05:52:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'match_bet' cannot be null' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 05:57:10 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 05:58:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 05:59:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'match_bet' cannot be null' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 06:04:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'match_bet' cannot be null' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 06:07:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'email_address' cannot be null' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 06:08:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 06:15:32 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 06:21:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 06:22:10 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 06:23:45 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45
+[11-May-2019 06:25:10 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'email_address' cannot be null' in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php:45
+Stack trace:
+#0 /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php(45): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336-sp19-final-project/final/api/bet.php on line 45

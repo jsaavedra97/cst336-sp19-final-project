@@ -122,6 +122,9 @@
                             $("#" + key.id).append("<div style='text-align:center;'><h2>VERSUS</h2><a id='" + i + "Modal' href='bet.php'> <h2>BET</h2></a></div>");
                             $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[1].opponent.name + "</h4></div>");
                             $("#div").append("</div>");
+                            $("#modalSelect").append("<option value='" + key.name + "'>" + key.name + "</option>");
+                            $("#modalSelectTeam").append("<option value='" + key.opponents[0].opponent.name + "'>" + key.opponents[0].opponent.name + "</option>");
+                            $("#modalSelectTeam").append("<option value='" + key.opponents[1].opponent.name + "'>" + key.opponents[1].opponent.name + "</option>");
                             i += 1;
                         } else if (!key.opponents[1]){
                             $("#div").append("<div class='container' id='" + key.id + "'>");
@@ -129,14 +132,20 @@
                             $("#" + key.id).append("<div style='text-align:center;'><h2>VERSUS</h2><a id='" + i + "Modal'> <h2>BET</h2></a></div>");
                             $("#" + key.id).append("<div><img class='img2' id='tbd' src='img/tbd.jpeg' width='100px' height='100px'/><h4>TBD</h4></div>");
                             $("#div").append("</div>");
+                            $("#modalSelect").append("<option value='" + key.name + "'>" + key.name + "</option>");
+                            $("#modalSelectTeam").append("<option value='" + key.opponents[0].opponent.name + "'>" + key.opponents[0].opponent.name + "</option>");
+                            $("#modalSelectTeam").append("<option value='" + key.opponents[1].opponent.name + "'>" + key.opponents[1].opponent.name + "</option>");
                             i += 1;
                         } else {
                             $("#div").append("<div class='container' id='" + key.id + "'>");
                             $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[0].opponent.name + "</h4></div>");
-                            $("#" + key.id).append("<div style='text-align:center;'><h2>VERSUS</h2><button id='" + i + "Modal'> BET</button></div>");
+                            $("#" + key.id).append("<div style='text-align:center;'><h2>VERSUS</h2></div>");
                             //$("#" + key.id).append("<div><a href='#' data-toggle='modal' data-target='#" + key.id + "Modal'><h2>BET</h2></a><h2>VERSUS</h2><div id='"+ key.id +"Modal' class='modal'><form class='modal-content animate'><div class='imgcontainer'><span onclick='document.getElementById('" + key.id + "Modal').style.display='none'' class='close' title='Close Modal'>&times;</span></div><div class='container'><label for='uname'><b>Username</b></label><input type='text' placeholder='Enter Username' name='uname' required><label for='psw'><b>Password</b></label><input type='password' placeholder='Enter Password' name='psw' required><button type='submit'>Login</button></div><div class='container1' style='background-color:#f1f1f1'><button type='button' onclick='document.getElementById('"+key.id+"Modal').style.display='none'' class='cancelbtn'>Cancel</button></div></form></div></div>");
                             $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h4>" + key.opponents[1].opponent.name + "</h4></div>");
                             $("#div").append("</div>");
+                            $("#modalSelect").append("<option value='" + key.name + "'>" + key.name + "</option>");
+                            $("#modalSelectTeam").append("<option value='" + key.opponents[0].opponent.name + "'>" + key.opponents[0].opponent.name + "</option>");
+                            $("#modalSelectTeam").append("<option value='" + key.opponents[1].opponent.name + "'>" + key.opponents[1].opponent.name + "</option>");
                             i += 1;
                             /*var modal = document.getElementById(key.id + "Modal");
 
@@ -210,6 +219,7 @@
                             $("#" + key.id).append("<h2>  VERSUS  </h2>");
                             $("#" + key.id).append("<div><img class='img2' src='"+ key.opponents[1].opponent.image_url +"' width='100px' height='100px'/><h2>" + key.opponents[1].opponent.name + "</h2></div>");
                             $("#div").append("</div>");
+                            
                         } else if (!key.opponents[1]){
                             $("#div").append("<div class='container' id='" + key.id + "'>");
                             $("#" + key.id).append("<div><img class='img1' src='"+ key.opponents[0].opponent.image_url +"' width='100px' height='100px'/><h2>" + key.opponents[0].opponent.name + "</h2></div>");
@@ -229,7 +239,30 @@
                 });
                 });
                 
-                
+                $("#loginButton").on('click', function(e) {
+                  var email = '<?php echo $_SESSION["email_address"]; ?>';
+                    $.ajax({
+                        type: "post",
+                        url: "api/bet.php",
+                        dataType: "text",
+                        data: {
+                            "email_address" : email,
+                            "match_bet": $("input[name='match']").val(),
+                            "pick": $("input[name='pick']").val(),
+                            "amount" : $("input[name='quantity']").val(),
+                        },
+                        success: function(data, status) {
+                            console.log(data);
+                                alert("Bet successfully placed");
+                                console.log(data);
+                                console.log("in success");
+                        },
+                        complete: function(data, status) { //optional, used for debugging purposes
+                            console.log(data);
+                            console.log(status);
+                        }
+                    });
+                });
                 
                 });
                 
@@ -267,6 +300,31 @@
           </div>
         </nav>
 
+        <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+          <p class="centered"><a href="img/tbd.jpg"><img src="img/tbd.jpg" class="img-circle" width="80"></a></p>
+          <h5 id="sidebarEmail" class="centered"></h5>
+          <li class="mt">
+            <button class="btn-theme02" id="openButton">Open Modal</button>
+          </li>
+          <!--<li class="sub-menu">
+            <a href="bet_history.php">
+              <i class="fa fa-cogs"></i>
+              <span>Previous bets</span>
+              </a>
+          </li>
+          <li class="sub-menu">
+            <a href="settings.php">
+              <i class="fa fa-book"></i>
+              <span>Settings</span>
+              </a>
+          </li>-->
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
 
         <section id="main-content">
           <section class="wrapper">
@@ -276,11 +334,57 @@
           </section>
         </section>
       
+      <div id="modalBox" class="modal">
+
+        <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="text-align-last: center">Place Bet</h4>
+            </div>
+            <div id="bodyModal" class="modal-body">
+                <select name="match" id="modalSelect">
+                  <option selected="selected">Select a Match</option>
+                </select>
+                <select name="pick" id="modalSelectTeam">
+                  <option selected="selected">Select a Team</option>
+                </select>
+                <input type="number" name="quantity" min="1" max="1000">
+                <button id="loginButton" type="button" class="btn btn-lg btn-primary btn-block">Submit</button>
+            </div>
+            <div class="modal-footer">
+                
+            </div>
+        </div>
+    </div>
+    </div>
+      
       <script>
-        $("#0Modal").on("click", function(){
-                 console.log("Modal");
-                 window.location = "bet.php";
-                });
+        var modal=document.getElementById('modalBox');
+
+        // Get the button that opens the modal
+        var btn=document.getElementById("openButton");
+        
+        // Get the <span> element that closes the modal
+        var span=document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on the button, open the modal
+        btn.onclick=function() {
+            modal.style.display="block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick=function() {
+            modal.style.display="none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick=function(event) {
+            if (event.target==modal) {
+                modal.style.display="none";
+            }
+        }
       </script>
     
     </body>

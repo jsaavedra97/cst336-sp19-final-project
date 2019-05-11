@@ -31,10 +31,6 @@
                       console.log(data);
                       if (!data || data.length == 0) return;
 
-                        var asOfDateFormatted = $.format.date(data.standings_date, "d-MMM-yy");
-
-                        // Insert the date
-                        $('h1 > span').html(asOfDateFormatted);
 
                         // Print the standings
                         for (var i in data) {
@@ -154,7 +150,7 @@
             <h1>Bet History</h1>
             
             <div class="container">
-              <h1>Standings as of <span></span></h1>
+              <h1>Previous Bets<span></span></h1>
                 <div class="table-responsive">
                   <table id="results" class="table table-hover">
                       <thead>
